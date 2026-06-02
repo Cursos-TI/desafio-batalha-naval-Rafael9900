@@ -8,6 +8,8 @@ int main() {
     // 2. Declarar e inicializar os vetores dos navios (Arrays Unidimensionais)
     int navioHorizontal[3] = {3, 3, 3};
     int navioVertical[3] = {3, 3, 3};
+    int navioDiagonal1[3] = {3,3,3};
+    int navioDiagonal2[3] = {3,3,3};
 
     // Definição das coordenadas iniciais (Garantindo que não há sobreposição)
     // Navio Horizontal: linha 2, coluna 1 até a coluna 3
@@ -18,6 +20,14 @@ int main() {
     int linhaInicialV = 5;
     int colunaNavioV = 6;
 
+    // Navio Diagonal 1: começará na linha 6 coluna 0,
+    int linhaInicialD1 = 6;
+    int colunaNavioD1 = 0;
+
+    // Navio Diagonal 2: começará na linha 1 coluna 5, até a linha 3 na coluna 7
+    int linhaInicialD2 = 1;
+    int colunaNavioD2 = 5;
+
     // Posicionando o Navio Horizontal na matriz
     for (int i = 0; i < 3; i++) {
         tabuleiro[linhaNavioH][colunaInicialH + i] = navioHorizontal[i];
@@ -26,6 +36,18 @@ int main() {
     // Posicionando o Navio Vertical na matriz
     for (int i = 0; i < 3; i++) {
         tabuleiro[linhaInicialV + i][colunaNavioV] = navioVertical[i];
+    }
+
+    // Posicionando o Navio Diagonal1 na matriz
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[linhaInicialD1 + i][colunaNavioD1 + i] = navioDiagonal1[i];
+        
+    }
+
+    // Posicionando o Navio Diagonal2 na matriz
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[linhaInicialD2 + i][colunaNavioD2 + i] = navioDiagonal2[i];
+        
     }
 
     // 3. Exibir o Tabuleiro com loops aninhados
